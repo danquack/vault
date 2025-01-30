@@ -75,13 +75,11 @@ cause Vault to attempt to retrieve credentials from the AWS metadata service.
 
 ### High availability parameters
 
-- `ha_enabled` `(string: "false")` - Specifies if high availability mode is
-  enabled. This is a boolean value, but it is specified as a string like "true"
-  or "false". Alternatively, this parameter can be omitted and the 
-  `S3_STORAGE_HA_ENABLED` environment variable can be used to 
-  enable or disable high availability. If both the environment variable and 
-  the parameter in the stanza are set, the value of the environment variable will 
-  take precedence.
+- `ha_enabled` `(string: "false")` - Enable high availability mode. Use the
+  string `true` to enable HA mode and the string `false` to disable HA support.
+  You can also use the  `S3_STORAGE_HA_ENABLED` environment variable to 
+  enable or disable high availability. The `S3_STORAGE_HA_ENABLED` environment
+  variable takes precedence over the `ha_enabled` configuration parameter.
   
 
 ## `s3` examples
